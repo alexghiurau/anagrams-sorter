@@ -1,4 +1,4 @@
-# anagrams.py - Instructions
+# anagrams-sorter - Instructions
 
 ## Launching the application
 
