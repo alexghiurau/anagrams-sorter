@@ -15,6 +15,7 @@ def sortAnagrams(lines):
         # sort each word's characters alphabetically
         sortedLine = ''.join(sorted(line))
         if sortedLine in dictionary:
+            # if in dict, append next to other anagram
             dictionary[sortedLine].append(line)
         else:
             dictionary[sortedLine] = [line]
