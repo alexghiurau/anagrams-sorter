@@ -30,18 +30,23 @@ def readFromFile():
     
     with open(sys.argv[1], 'r') as reader:
         # create array with each word from file
-        lines = [line.strip() for line in reader]
+        words = [word.strip() for word in reader]
 
-        # remove duplicate lines
-        lines = set(lines)
+        # remove duplicate words
+        words = set(words)
         
-        sortAnagrams(lines)
+        sortAnagrams(words)
 
 # write to the file 'sortedWords.txt', replacing existing data (if any)
 def writeToFile(anagrams):
     with open('sortedWords.txt', 'w') as writer:
         for anagram in anagrams:
             writer.write(' '.join([str(s) for s in list(anagram)]) + '\n')
+    print("Task has been completed.")
 
-# when program loads, read from specified file
-readFromFile()
+# main function that initialises the process
+def main():
+    readFromFile()
+
+# when program loads, start main function
+main()
